@@ -1,0 +1,72 @@
+{
+    "kind": "ImageStreamMapping",
+    "apiVersion": "v1",
+    "metadata": {
+      "name": "origin-ruby-sample",
+      "namespace": "test"
+    },
+    "image": {
+      "metadata": {
+        "name": "a2f15cc10423c165ca221f4a7beb1f2949fb0f5acbbc8e3a0250eb7d5593ae64"
+      },
+      "dockerImageReference": "172.30.17.3:5001/test/origin-ruby-sample:a2f15cc10423c165ca221f4a7beb1f2949fb0f5acbbc8e3a0250eb7d5593ae64",
+      "dockerImageMetadata": {
+        "kind": "DockerImage",
+        "apiVersion": "1.0",
+        "Id": "a2f15cc10423c165ca221f4a7beb1f2949fb0f5acbbc8e3a0250eb7d5593ae64",
+        "Parent": "3bb14bfe4832874535814184c13e01527239633627cdc38f18fa186e73a6b62c",
+        "Created": "2015-01-23T21:47:04Z",
+        "Container": "f81db8980c62d7650683326173a361c3b09f3bc41471918b6319f7df67943b54",
+        "ContainerConfig": {
+          "Hostname": "f81db8980c62",
+          "User": "ruby",
+          "AttachStdout": true,
+          "ExposedPorts": {
+            "9292/tcp": {}
+          },
+          "OpenStdin": true,
+          "StdinOnce": true,
+          "Env": [
+            "OPENSHIFT_BUILD_NAME=4bf65438-a349-11e4-bead-001c42c44ee1",
+            "OPENSHIFT_BUILD_NAMESPACE=test",
+            "OPENSHIFT_BUILD_SOURCE=https://github.com/openshift/ruby-hello-world",
+            "PATH=/opt/ruby/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "STI_SCRIPTS_URL=https://raw.githubusercontent.com/openshift/sti-ruby/master/2.0/.sti/bin",
+            "APP_ROOT=.",
+            "HOME=/opt/ruby"
+          ],
+          "Cmd": [
+            "/bin/sh",
+            "-c",
+            "tar -C /tmp -xf - \u0026\u0026 /tmp/scripts/assemble"
+          ],
+          "Image": "openshift/ruby-20-centos7",
+          "WorkingDir": "/opt/ruby/src"
+        },
+        "DockerVersion": "1.4.1-dev",
+        "Config": {
+          "User": "ruby",
+          "ExposedPorts": {
+            "9292/tcp": {}
+          },
+          "Env": [
+            "OPENSHIFT_BUILD_NAME=4bf65438-a349-11e4-bead-001c42c44ee1",
+            "OPENSHIFT_BUILD_NAMESPACE=test",
+            "OPENSHIFT_BUILD_SOURCE=https://github.com/openshift/ruby-hello-world",
+            "PATH=/opt/ruby/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "STI_SCRIPTS_URL=https://raw.githubusercontent.com/openshift/sti-ruby/master/2.0/.sti/bin",
+            "APP_ROOT=.",
+            "HOME=/opt/ruby"
+          ],
+          "Cmd": [
+            "/tmp/scripts/run"
+          ],
+          "WorkingDir": "/opt/ruby/src"
+        },
+        "Architecture": "amd64",
+        "Size": 11710004
+      },
+      "dockerImageMetadataVersion": "1.0"
+    },
+    "tag": "latest"
+  }

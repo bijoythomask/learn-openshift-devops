@@ -1,0 +1,31 @@
+{
+  "kind": "ImageStream",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "origin-ruby-sample",
+    "namespace": "p1",
+    "selfLink": "/osapi/v1/namesapces/p1/imageStreams/origin-ruby-sample",
+    "uid": "480dfe73-f340-11e4-97b5-001c422dcd49",
+    "resourceVersion": "293",
+    "creationTimestamp": "2015-05-05T16:03:34Z",
+    "labels": {
+      "template": "application-template-stibuild"
+    }
+  },
+  "spec": {},
+  "status": {
+    "dockerImageRepository": "172.30.30.129:5000/p1/origin-ruby-sample",
+    "tags": [
+      {
+        "tag": "latest",
+        "items": [
+          {
+            "created": "2015-05-05T16:05:47Z",
+            "dockerImageReference": "172.30.30.129:5000/p1/origin-ruby-sample@sha256:4d3a646b58685449179a0c61ad4baa19a8df8ba668e0f0704b9ad16f5e16e642",
+            "image": "sha256:4d3a646b58685449179a0c61ad4baa19a8df8ba668e0f0704b9ad16f5e16e642"
+          }
+        ]
+      }
+    ]
+  }
+}
