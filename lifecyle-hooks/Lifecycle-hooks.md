@@ -121,7 +121,7 @@ variables.
     oc delete dc dbinit
 
     oc process -f dbinit-deployment-config.json \
-    -v="IMAGE_STREAM=$(oc export is dbinit --template='{{range .spec.tags}}{{.from.name}}{{end}}')" \
+    -p="IMAGE_STREAM=$(oc export is dbinit --template='{{range .spec.tags}}{{.from.name}}{{end}}')" \
     |  oc create -f -
 
 ## trigger a deployment
@@ -133,6 +133,10 @@ variables.
     oc get events | grep dbinit
 
 ## After DB init deployment again examine the database Using Postgres commands
+
+    winpty oc rsh $(oc get pods -lapp=postgresql-persistent -o name)
+
+    psql -H localhost -d test -U postgres
 
     test=# \dt+
     No relations found.
@@ -149,5 +153,5 @@ variables.
 
 ## References :- 
 
-* https://raw.githubusercontent.com/openshift/openshift-ansible/master/roles/openshift_examples/files/examples/latest/db-templates/postgresql-persistent-template.json
-* https://raw.githubusercontent.com/devops-with-openshift/liquibase-example/master/dbinit-data-pvc.yaml
+* <https://raw.githubusercontent.com/openshift/openshift-ansible/master/roles/openshift_examples/files/examples/latest/db-templates/postgresql-persistent-template.json>
+* <https://raw.githubusercontent.com/devops-with-openshift/liquibase-example/master/dbinit-data-pvc.yaml>
