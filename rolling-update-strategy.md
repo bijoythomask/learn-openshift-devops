@@ -36,5 +36,6 @@
 ## Triggger new deployment
 
         oc rollout myapp --latest
+        oc deply myapp --latest (for older versions)
 
 
